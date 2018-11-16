@@ -55,5 +55,23 @@ class Grammable
     no_match
   end
 
+  def letter_match()
+    letters_match = false
+    for_letters = @word1.split("").uniq
+    contains = []
+
+    for_letters.each do |for_letter|
+      check_for_match = @word2.include?(for_letter)
+      if check_for_match
+        letters_match = true
+        contains.push("#{for_letter}")
+      end
+    end
+    if letters_match
+      return contains
+    else
+      return false
+    end
+  end
 
 end
