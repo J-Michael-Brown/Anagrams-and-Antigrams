@@ -11,7 +11,6 @@ def for_each_grammable(input_word, *statements)
     end
   end
 
-  puts "check '#{for_word}' against #{check_words}"
   results = []
   check = Grammable.new(for_word)
   check_words.each do |check_word|
