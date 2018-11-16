@@ -28,6 +28,11 @@ describe('Grammable') do
     expect(next_test.word?()).to(eq(true))
   end
 
+  it('For the word?() method should also check for a string of letters at least three long, as no word in the englis language has that') do
+    test = Grammable.new("eeeviiil")
+    expect(test.word?()).to(eq(false))
+  end
+
   it("If phrases aren't anagrams, the antigram?() method should check whether they are actually 'antigrams.'") do
     test = Grammable.new("kind","Cthulu")
     expect(test.antigram?()).to(eq(true))

@@ -20,18 +20,18 @@ class Grammable
     vowels = ["a","e","i","o","u","y"]
     first_is_word = false
     second_is_word = false
+    well_are_they = false
+
     vowels.each do |vowel|
-      if @word1.include?(vowel)
-        first_is_word = true
-      end
-      if @word2.include?(vowel)
-        second_is_word = true
-      end
-      if first_is_word & second_is_word
-        return true
+      if @word1.include?(vowel) & @word2.include?(vowel)
+        well_are_they = true
       end
     end
-    false
+
+    if ((/(\w)(\1)(\1)/=~@word1) == 0) | ((/(\w)(\1)(\1)/=~@word2) == 0)
+      well_are_they = true
+    end
+    well_are_they
   end
 
   def anagram?()
