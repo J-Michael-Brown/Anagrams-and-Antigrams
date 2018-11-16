@@ -33,11 +33,12 @@ describe('Grammable') do
     expect(test.antigram?()).to(eq(true))
   end
 
-  it("Account for multiple words being 'anagrams' or 'antigrams.'") do
-    test = Grammable.new("evil","veil")
-    expect(test.anagram?()).to(eq("anagram"))
-    next_test = Grammable.new("evil","good")
-    expect(next_test.anagram?()).to(eq("antigram"))
-  end
 
+end
+
+describe('for_each_grammable') do
+  it("Account for multiple words being 'anagrams' or 'antigrams.'") do
+    expect(for_each_grammable("evil","splt","veil","good") ).to(eq(["not a word","anagram","antigram"]))
+  end
+  
 end
