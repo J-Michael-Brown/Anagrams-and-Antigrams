@@ -1,6 +1,7 @@
 require ('rspec')
 require ('pry')
 require ('Grammable')
+require ('seporite_methods.rb')
 
 
 describe('Grammable') do
@@ -20,7 +21,7 @@ describe('Grammable') do
     expect(test.anagram?()).to(eq(true))
   end
 
-  it('If at least one of the words is not considered a real potentia word, it is not an anagram because it is not a real word; only accounts for a lack of vowels (including "y").') do
+  it('If at least one of the words is not considered a real potential word, it is not an anagram because it is not a real word; only accounts for a lack of vowels (including "y").') do
     test = Grammable.new("evil","prts")
     expect(test.word?()).to(eq(false))
     next_test = Grammable.new("evil","parts")
