@@ -1,42 +1,47 @@
-# _{Application Name}_
+# _Anagrams and Antigrams_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Methods to tell the user if words have special properties, November 16, 2018_
 
-#### By _**{List of contributors}**_
+#### By _**J. Michael Brown**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_Contains a class that allows the user to perform several methods to check two words for to see if they qualify as Anagrams, Antigrams (words share no letters), and a method to check for overlapping letters. Also comes with a paired method that utilizes this new class to perform these functionalities on a whole sentence/phrase._
 
-## Specifications
-* _**When User inputs a simple "input", the expected result should be a completed simple task "expected result".**_  
-_Example Input: "input"_  
-_Example Output: "expected result"_
-* _**When User inputs a slightly more complex input "Input Two", the expected result should handle this new, and any previous specifications.**_  
-_Example Input: "Ha$~vE!"_  
-_Example Output: "have"_
+## Setup/Installation Requirements    
+**Open the page at this url:   https://J-Michael-Brown.github.io/Anagrams-and-Antigrams/**    
 
-## Setup/Installation Requirements
+or    
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+_Requires git to be downloaded on your devise to use instructed git terminal commands._
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+ _1. Open your terminal (command+spacebar on homepage for mac, to search for "terminal")_
+
+ _2. Navigate to your desktop (input "cd ~" to go to home directory then "cd desktop" to move to desktop)_
+
+ _3 . Copy url for a clone (located top right of listed files in green)_
+
+ _4. Clone onto Desktop (type "git clone <url link>" replacing '<url link>' with the link you copied in step 3)_
+
+ _5. double click the Anagrams-and-Antigrams file on your desktop to open the finder and view files, or in your terminal type: cd Anagrams-and-Antigrams and open it with whatever program you prefer._   
+
+_*I liked using https://repl.it/repls/DifferentPertinentMachinecode to test my code. Once you open the Grammable.rb and seporite_methods.rb files you can copy the method and class contained in each file to the tester to use the code live and relatively safely.*_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_No known bugs, but if you find any feel free to contact me._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_If you run into any issues or have questions, ideas or concerns, or if you want to make a contribution to the code; You can email Me at @jmichaelbrown132737@gmail.com_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_Ruby 2.5_
+
+### Special Thanks
+
+_I found 'reject(&:empty?)' logic on stack overflow by Matt Greer https://stackoverflow.com/questions/5878697/how-do-i-remove-blank-elements-from-an-array._
 
 ### License
 
