@@ -56,7 +56,7 @@ describe('for_each_grammable') do
   end
 
   it("If two phrases aren't anagrams, return how many letters from the argument are actual matches with the receiver.") do
-    expect(for_each_grammable("it's","sit") ).to(eq(["anagram"]))
+    expect(for_each_grammable("cat","batty") ).to(eq(["'cat' and 'batty' aren't anagrams but 2 letter(s) match: a, t."]))
   end
 
 end

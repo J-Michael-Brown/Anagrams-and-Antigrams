@@ -23,7 +23,8 @@ def for_each_grammable(input_word, *statements)
     elsif check.antigram?
       results.push("antigram")
     else
-      results.push("nothing special")
+      overlap = check.letter_match
+      results.push("'#{for_word}' and '#{check_word}' aren't anagrams but #{overlap.length} letter(s) match: #{overlap.join(", ")}.")
     end
   end
   results
