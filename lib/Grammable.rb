@@ -74,4 +74,21 @@ class Grammable
     end
   end
 
+  def palindrome?
+  palindrome_attempt1 = @word1 + @word2
+  success = []
+  palindrome_attempt2 = @word2 + @word1
+  if palindrome_attempt1 == palindrome_attempt1.reverse
+    success.push(@word1 + " " + @word2)
+  end
+  if palindrome_attempt2 == palindrome_attempt2.reverse
+    success.push(@word2 + " " + @word1)
+  end
+  if success.length > 0
+    success
+  else
+    false
+  end
+end
+
 end

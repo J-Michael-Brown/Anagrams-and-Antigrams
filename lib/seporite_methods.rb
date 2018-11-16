@@ -19,9 +19,15 @@ def for_each_grammable(input_word, *statements)
     if !check.word?
       results.push("not a word")
     elsif check.anagram?
-      results.push("anagram")
+      double_check = ["anagram"]
+      if check.palindrome?
+      double_check.push(", also words make palindrome: "+ check.palindrome?.join(" and "))
+      end
+      results.push(double_check.join)
     elsif check.antigram?
       results.push("antigram")
+    elsif check.palindrome?
+      results.push("words make palindrome: "+ check.palindrome?.join(" and "))
     else
       overlap = check.letter_match
       results.push("'#{for_word}' and '#{check_word}' aren't anagrams but #{overlap.length} letter(s) match: #{overlap.join(", ")}.")

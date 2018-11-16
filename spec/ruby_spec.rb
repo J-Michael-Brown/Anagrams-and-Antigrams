@@ -38,17 +38,24 @@ describe('Grammable') do
     expect(test.letter_match()).to(eq(["h","e"]))
   end
 
+  it("The palindrome?() method finds return the number of matching letters in the word") do
+    test = Grammable.new("eve","ever")
+    expect(test.palindrome?()).to(eq("ever eve"))
+    next_test = Grammable.new("evil","live")
+    expect(next_test.palindrome?()).to(eq("evil live and live evil"))
+  end
+
 
 end
 
 describe('for_each_grammable') do
 
   it("Account for multiple words being 'anagrams' or 'antigrams.'") do
-    expect(for_each_grammable("evil","splt","veil","good") ).to(eq(["not a word","anagram","antigram"]))
+    expect(for_each_grammable("evil","veil","good") ).to(eq(["anagram","antigram"]))
   end
 
   it("Account for multiple words being inputed") do
-    expect(for_each_grammable("evil","splt veil good") ).to(eq(["not a word","anagram","antigram"]))
+    expect(for_each_grammable("evil","splt veil good") ).to(eq(["anagram","antigram"]))
   end
 
   it("Account for punctuation not mattering") do
