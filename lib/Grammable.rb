@@ -16,16 +16,6 @@ class Grammable
     "'#{@word1}' and '#{@word2}'"
   end
 
-  def anagram?()
-    test_from = (@word1.upcase.split("").sort()).join
-    test_against = (@word2.upcase.split("").sort()).join
-    if test_from == test_against
-      return true
-    else
-      return false
-    end
-  end
-
   def word?()
     vowels = ["a","e","i","o","u","y"]
     first_is_word = false
@@ -42,6 +32,27 @@ class Grammable
       end
     end
     false
+  end
+
+  def anagram?()
+    test_from = (@word1.upcase.split("").sort()).join
+    test_against = (@word2.upcase.split("").sort()).join
+    if test_from == test_against
+      return true
+    else
+      return false
+    end
+  end
+
+  def antigram?()
+    letters = @word1.split("")
+    no_match = true
+    letters.each do |letter|
+      if @word2.include?(letter)
+        no_match = false
+      end
+    end
+    no_match
   end
 
 
