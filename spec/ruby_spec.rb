@@ -51,19 +51,24 @@ end
 describe('for_each_grammable') do
 
   it("Account for multiple words being 'anagrams' or 'antigrams.'") do
-    expect(for_each_grammable("evil","veil","good") ).to(eq(["anagram","antigram"]))
+    expect(for_each_grammable("evil","veil","good")).to(eq(["anagram","antigram"]))
   end
 
   it("Account for multiple words being inputed") do
-    expect(for_each_grammable("evil","veil good") ).to(eq(["anagram","antigram"]))
+    expect(for_each_grammable("evil","veil good")).to(eq(["anagram","antigram"]))
   end
 
   it("Account for punctuation not mattering") do
-    expect(for_each_grammable("it's","sit") ).to(eq(["anagram"]))
+    expect(for_each_grammable("@it's","si%t!")).to(eq(["anagram"]))
   end
 
   it("If two phrases aren't anagrams, return how many letters from the argument are actual matches with the receiver.") do
     expect(for_each_grammable("cat","batty") ).to(eq(["'cat' and 'batty' aren't anagrams but 2 letter(s) match: a, t."]))
   end
+
+  it("Should handle any combination of inputs to special type.") do
+    expect(for_each_grammable("word", "big", "row", "feather", "drow")).to(eq(["antigram", "words make palindrome: word row", "'word' and 'feather' aren't anagrams but 1 letter(s) match: r.", "anagram, also words make palindrome: word drow and drow word"]))
+  end
+
 
 end
