@@ -25,4 +25,24 @@ class Grammable
       return false
     end
   end
+
+  def word?()
+    vowels = ["a","e","i","o","u","y"]
+    first_is_word = false
+    second_is_word = false
+    vowels.each do |vowel|
+      if @word1.include?(vowel)
+        first_is_word = true
+      end
+      if @word2.include?(vowel)
+        second_is_word = true
+      end
+      if first_is_word & second_is_word
+        return true
+      end
+    end
+    false
+  end
+
+
 end
