@@ -40,5 +40,13 @@ describe('for_each_grammable') do
   it("Account for multiple words being 'anagrams' or 'antigrams.'") do
     expect(for_each_grammable("evil","splt","veil","good") ).to(eq(["not a word","anagram","antigram"]))
   end
-  
+
+  it("Account for multiple words being inputed") do
+    expect(for_each_grammable("evil","splt veil good") ).to(eq(["not a word","anagram","antigram"]))
+  end
+
+  it("Account for punctuation not mattering") do
+    expect(for_each_grammable("it's","sit") ).to(eq(["anagram"]))
+  end
+
 end
