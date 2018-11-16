@@ -1,5 +1,5 @@
 class Grammable
-  def initialize(word1="live", word2="evil")
+  def initialize (word1="live", word2="evil")
     @word1 = word1
     @word2 = word2
   end
@@ -14,5 +14,15 @@ class Grammable
 
   def display_words()
     "'#{@word1}' and '#{@word2}'"
+  end
+
+  def anagram?()
+    test_from = (@word1.upcase.split("").sort()).join
+    test_against = (@word2.upcase.split("").sort()).join
+    if test_from == test_against
+      return true
+    else
+      return false
+    end
   end
 end
