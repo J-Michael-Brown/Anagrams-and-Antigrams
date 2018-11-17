@@ -11,9 +11,6 @@ _Contains a class that allows the user to perform several methods to check two w
 _Word?() test to checks if a given input is a word currently checks for: vowels, any letter that appears three times in a row (the 'ooo' in 'wooot'), assumes that words greater than 45 letters are fake (no word longer than 45 characters apears in the average dictionary)._
 
 ## Setup/Installation Requirements    
-**Open the page at this url:   https://J-Michael-Brown.github.io/Anagrams-and-Antigrams/**    
-
-or    
 
 _Requires git to be downloaded on your devise to use instructed git terminal commands._
 

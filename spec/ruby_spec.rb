@@ -44,7 +44,7 @@ describe('Grammable') do
   end
 
   it("The letter_match() method finds return the number of matching letters in the word") do
-    test = Grammable.new("have","togethor")
+    test = Grammable.new("have","together")
     expect(test.letter_match()).to(eq(["h","e"]))
   end
 
