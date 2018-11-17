@@ -15,7 +15,7 @@ def for_each_grammable(input_word, *statements)
   check = Grammable.new(for_word)
   check_words.each do |check_word|
     check.change_second(check_word)
-    if !check.word?
+    if !check.words?
       results.push("not a word")
     elsif check.anagram?
       double_check = ["anagram"]

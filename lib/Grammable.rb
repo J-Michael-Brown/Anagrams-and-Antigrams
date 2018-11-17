@@ -16,7 +16,7 @@ class Grammable
     "'#{@word1}' and '#{@word2}'"
   end
 
-  def word?()
+  def words?()
     vowels = ["a","e","i","o","u","y"]
     first_is_word = false
     second_is_word = false
@@ -34,10 +34,8 @@ class Grammable
       end
     end
 
-    puts (/(\w)(\1)(\1)/=~@word1)
-    puts (/(\w)(\1)(\1)/=~@word2)
-    if ((/(\w)(\1)(\1)/=~@word1) == 0) & ((/(\w)(\1)(\1)/=~@word2) == 0)
-      well_are_they = true
+    if ((/(\w)(\1)(\1)/=~@word1)) || ((/(\w)(\1)(\1)/=~@word2))
+      return false
     end
 
     well_are_they

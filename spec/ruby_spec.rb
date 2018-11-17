@@ -21,16 +21,16 @@ describe('Grammable') do
     expect(test.anagram?()).to(eq(true))
   end
 
-  it('For the word?() method: if at least one of the words is not considered a real potential word, it is not an anagram because it is not a real word; only accounts for a lack of vowels (including "y").') do
+  it('For the words?() method: if at least one of the words is not considered a real potential word, it is not an anagram because it is not a real word; only accounts for a lack of vowels (including "y").') do
     test = Grammable.new("evil","prts")
-    expect(test.word?()).to(eq(false))
+    expect(test.words?()).to(eq(false))
     next_test = Grammable.new("evil","parts")
-    expect(next_test.word?()).to(eq(true))
+    expect(next_test.words?()).to(eq(true))
   end
 
-  it('For the word?() method should also check for a string of letters at least three long, as no word in the englis language has that') do
+  it('For the words?() method should also check for a string of letters at least three long, as no word in the englis language has that') do
     test = Grammable.new("eeeviiil")
-    expect(test.word?()).to(eq(false))
+    expect(test.words?()).to(eq(false))
   end
 
   it("If phrases aren't anagrams, the antigram?() method should check whether they are actually 'antigrams.'") do
