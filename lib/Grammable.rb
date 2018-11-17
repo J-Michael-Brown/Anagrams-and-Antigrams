@@ -22,6 +22,14 @@ class Grammable
     second_is_word = false
     well_are_they = false
 
+    if ((/(\w)(\1)(\1)/=~@word1)) || ((/(\w)(\1)(\1)/=~@word2))
+      return false
+    end
+
+    if @word1.length > 45 && @word2.length > 45
+      return false
+    end
+
     vowels.each do |vowel|
       if @word1.include?(vowel)
         first_is_word = true
@@ -32,10 +40,6 @@ class Grammable
       if first_is_word & second_is_word
         well_are_they = true
       end
-    end
-
-    if ((/(\w)(\1)(\1)/=~@word1)) || ((/(\w)(\1)(\1)/=~@word2))
-      return false
     end
 
     well_are_they

@@ -8,7 +8,7 @@
 
 _Contains a class that allows the user to perform several methods to check two words for to see if they qualify as Anagrams, Antigrams (words share no letters), and a method to check for overlapping letters. Also comes with a paired method that utilizes this new class to perform these functionalities on a whole sentence/phrase._
 
-_Word?() test to check if a given input is a word currently checks for: vowels, ._
+_Word?() test to checks if a given input is a word currently checks for: vowels, any letter that appears three times in a row (the 'ooo' in 'wooot'), assumes that words greater than 45 letters are fake (no word longer than 45 characters apears in the average dictionary)._
 
 ## Setup/Installation Requirements    
 **Open the page at this url:   https://J-Michael-Brown.github.io/Anagrams-and-Antigrams/**    

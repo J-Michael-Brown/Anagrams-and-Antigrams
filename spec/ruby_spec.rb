@@ -33,6 +33,11 @@ describe('Grammable') do
     expect(test.words?()).to(eq(false))
   end
 
+  it('For the words?() method should also check the string of letters to see if the word is less than 45 characters long') do
+    test = Grammable.new("onethreeeightthirteentwentyonethirtythirtysixfourtyfive")
+    expect(test.words?()).to(eq(false))
+  end
+
   it("If phrases aren't anagrams, the antigram?() method should check whether they are actually 'antigrams.'") do
     test = Grammable.new("kind","Cthulu")
     expect(test.antigram?()).to(eq(true))
